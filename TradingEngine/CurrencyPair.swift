@@ -9,13 +9,17 @@
 import Foundation
 
 enum Currency: String {
+    
     case usd = "USD",
          eur = "EUR"
+    
 }
 
 struct CurrencyPair {
+    
     let base: Currency
     let quoted: Currency
+    
 }
 
 extension CurrencyPair: Equatable {

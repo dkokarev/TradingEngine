@@ -9,11 +9,14 @@
 import Foundation
 
 enum OrderSide: String {
+    
     case sell = "SELL",
          buy  = "BUY"
+    
 }
 
 struct Order {
+    
     let identifier: String
     var amount: Double
     let price: Double

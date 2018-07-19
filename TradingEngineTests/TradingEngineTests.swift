@@ -25,11 +25,11 @@ class TradingEngineTests: XCTestCase {
         let orders = [Order(rawValue: "BUY,560.50,50,USD/EUR")!,
                       Order(rawValue: "BUY,560.55,50,USD/EUR")!,
                       Order(rawValue: "BUY,560.60,40,USD/EUR")!,
-                      Order(rawValue: "SELL,540.60,40,USD/EUR")!]
+                      Order(rawValue: "SELL,580.60,100,USD/EUR")!]
         
         trandingEngine.place(orders: orders)
         
-        XCTAssertEqual(trandingEngine.orders.count, 3, "Wrong number of placed orders")
+        XCTAssertEqual(trandingEngine.orders.count, 4, "Wrong number of placed orders")
     }
     
     func testOrdersMatch() {
