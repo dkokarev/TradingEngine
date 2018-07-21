@@ -15,9 +15,7 @@ class DataProvider {
               let content = try? String(contentsOfFile: filepath, encoding: .utf8) else { return nil }
         
         let rows = content.components(separatedBy: .newlines)
-        return rows.compactMap({ (rawValue) in
-            return Order(rawValue: rawValue)
-        })
+        return rows.compactMap { Order(rawValue: $0) }
     }
     
 }
